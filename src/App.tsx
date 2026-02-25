@@ -65,33 +65,33 @@ const CONFIG = {
 
   // Certifications
   certifications: [
-    {"label": "BEPMA Lid", "icon": "award"},
-    {"label": "FOD Erkend", "icon": "filecheck"},
-    {"label": "Eco-verantwoord", "icon": "leaf"},
+    { "label": "BEPMA Lid", "icon": "award" },
+    { "label": "FOD Erkend", "icon": "filecheck" },
+    { "label": "Eco-verantwoord", "icon": "leaf" },
   ],
 
   // Services with pricing
   services: [
-    {"title": "Muizenbestrijding", "desc": "Effectieve muizenbestrijding met professionele methoden en langdurige resultaten.", "price": "Vanaf €89"},
-    {"title": "Rattenbestrijding", "desc": "Grondige rattenbestrijding met monitoring en preventie voor uw pand.", "price": "Vanaf €99"},
-    {"title": "Wespenbestrijding", "desc": "Veilige en snelle verwijdering van wespennesten door erkende specialisten.", "price": "Vanaf €75"},
-    {"title": "Bedwantsenbestrijding", "desc": "Professionele bedwantsenbestrijding met warmtebehandeling voor maximale effectiviteit.", "price": "Vanaf €149"},
-    {"title": "Kakkerlakkenbestrijding", "desc": "Effectieve kakkerlakkenbestrijding met IPM-aanpak en garantie op resultaat.", "price": "Vanaf €109"},
-    {"title": "Steenmarter Wering", "desc": "Professionele wering van steenmarters uit uw woning met bouwkundige maatregelen.", "price": "Op aanvraag"},
+    { "title": "Muizenbestrijding", "desc": "Effectieve muizenbestrijding met professionele methoden en langdurige resultaten.", "price": "Vanaf €89" },
+    { "title": "Rattenbestrijding", "desc": "Grondige rattenbestrijding met monitoring en preventie voor uw pand.", "price": "Vanaf €99" },
+    { "title": "Wespenbestrijding", "desc": "Veilige en snelle verwijdering van wespennesten door erkende specialisten.", "price": "Vanaf €75" },
+    { "title": "Bedwantsenbestrijding", "desc": "Professionele bedwantsenbestrijding met warmtebehandeling voor maximale effectiviteit.", "price": "Vanaf €149" },
+    { "title": "Kakkerlakkenbestrijding", "desc": "Effectieve kakkerlakkenbestrijding met IPM-aanpak en garantie op resultaat.", "price": "Vanaf €109" },
+    { "title": "Steenmarter Wering", "desc": "Professionele wering van steenmarters uit uw woning met bouwkundige maatregelen.", "price": "Op aanvraag" },
   ],
 
   // Testimonials
   testimonials: [
-    {"name": "Katrien S.", "location": "Aarschot", "text": "SPOT Pest Control heeft ons muizenprobleem snel en vakkundig opgelost. Zeer tevreden!"},
-    {"name": "Bram L.", "location": "Leuven", "text": "Professionele aanpak van een kakkerlakkenplaag. Duidelijke communicatie en goed resultaat."},
-    {"name": "Nele W.", "location": "Brussel", "text": "Uitstekende service! Snel ter plaatse en het probleem was meteen verholpen."},
+    { "name": "Katrien S.", "location": "Aarschot", "text": "SPOT Pest Control heeft ons muizenprobleem snel en vakkundig opgelost. Zeer tevreden!" },
+    { "name": "Bram L.", "location": "Leuven", "text": "Professionele aanpak van een kakkerlakkenplaag. Duidelijke communicatie en goed resultaat." },
+    { "name": "Nele W.", "location": "Brussel", "text": "Uitstekende service! Snel ter plaatse en het probleem was meteen verholpen." },
   ],
 
   // Service regions
   regions: [
-    {"region": "Vlaams-Brabant", "cities": ['Aarschot', 'Leuven', 'Tielt-Winge', 'Diest', 'Scherpenheuvel', 'Haacht', 'Herent']},
-    {"region": "Brussel", "cities": ['Schaarbeek', 'Brussel', 'Jette', 'Anderlecht', 'Ukkel', 'Elsene']},
-    {"region": "Antwerpen", "cities": ['Antwerpen', 'Mechelen', 'Lier', 'Heist-op-den-Berg']},
+    { "region": "Vlaams-Brabant", "cities": ['Aarschot', 'Leuven', 'Tielt-Winge', 'Diest', 'Scherpenheuvel', 'Haacht', 'Herent'] },
+    { "region": "Brussel", "cities": ['Schaarbeek', 'Brussel', 'Jette', 'Anderlecht', 'Ukkel', 'Elsene'] },
+    { "region": "Antwerpen", "cities": ['Antwerpen', 'Mechelen', 'Lier', 'Heist-op-den-Berg'] },
   ],
 
   // Social links
@@ -208,7 +208,8 @@ const Hero = () => {
           alt="Professionele ongediertebestrijder aan het werk in beschermende kleding"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-brand-600/60" />
+        {/* Brand gradient overlay — 70-85% opacity for consistent readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-600/90 via-brand-600/80 to-brand-500/70" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-24">
@@ -217,7 +218,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-brand-500/20 border border-brand-500/40 text-brand-50 px-4 py-2 rounded-full mb-6 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 bg-white/10 border border-white/25 text-white px-4 py-2 rounded-full mb-6 backdrop-blur-sm"
           >
             <Clock size={16} />
             <span className="font-display font-semibold text-sm">Interventie binnen 24 uur — 7 dagen per week</span>
@@ -234,7 +235,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-brand-50 text-lg md:text-xl mb-10 leading-relaxed"
+            className="text-white text-lg md:text-xl mb-10 leading-relaxed"
           >
             Heeft u last van ongewenste dieren en insecten? Bij {CONFIG.name} zijn we gespecialiseerd in wering en bestrijding van ongedierte over {CONFIG.region}. Snel, discreet en met garantie.
           </motion.p>
